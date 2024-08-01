@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Sync</title>
+    <link rel="stylesheet" href="studystyles.css">
+</head>
+
+<body>
+
+    <div class="header">
+
+        <header class="header_content">
+            <a href="#logo" class="logo">
+                <img src="https://raw.githubusercontent.com/loveBabbar/CodehelpYTWebDev/a2e9c3ba2f06448e44ba1ca41354c0a7a23ab91c/lecture33/images/StudySyn.svg"
+                    / class="logo_icon">
+                <span class="logo_text">StudySync</span>
+
+
+                <nav class="nav">
+
+                    <a href="#home" class="navlink">Home</a>
+                    <a href="#features" class="navlink">Features</a>
+                    <a href="#pricing " class="navlink">Pricing</a>
+                    <a href="#blog" class="navlink">Blog</a>
+                    <a href="#about" class="navlink">About</a>
+
+                </nav>
+            </a>
+
+            <a href="#contact" class="contact">Contact Us</a>
+
+
+            <button type="button" class="menu-button">
+
+                <img src="data:image/png;base64,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"
+                    class="menu-icon">
+            </button>
+        </header>
+
+
+
+
+    </div>
+
+    <div class="content">
+
+        <section class="main-content">
+
+            <div class="content-left">
+
+                <p class="section-label">Very proud to introduce!</p>
+                <h1 class="section-title">Seemless Learning for Brighter Future</h1>
+                <p class="section-desc">Our innovative platform offers an effortless and seamless approach to learning,
+                    empowering students of all ages to achieve brighter futures. Join us on a transformative journey to
+                    simplify education and unlock your full potential.</p>
+
+                <div class="button-group"></div>
+                <a href="#start" class="startbutton">Start Now</a>
+                <a href="#tour" class="tourbutton">Take Tour</a>
+
+            </div>
+
+
+
+            <div class="content-right">
+
+                <div class="image-container">
+                    <img src="https://github.com/loveBabbar/CodehelpYTWebDev/blob/main/lecture33/images/usgs-hoS3dzgpHzw-unsplash.jpg?raw=true"
+                        class="section-image" loading="eager" />
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <div class=" company-container">
+
+        <h2>Trusted by the best</h2>
+        <div class="company-grid">
+
+            <div class="company-logo">
+                <img src="https://raw.githubusercontent.com/loveBabbar/CodehelpYTWebDev/a2e9c3ba2f06448e44ba1ca41354c0a7a23ab91c/lecture33/images/Google.svg"
+                    class="google-logo">
+                <span class="logo-tect">Google</span>
+
+            </div>
+
+
+            <div class="company-logo">
+                <img src="https://raw.githubusercontent.com/loveBabbar/CodehelpYTWebDev/a2e9c3ba2f06448e44ba1ca41354c0a7a23ab91c/lecture33/images/Microsoft.svg"
+                    class="google-logo">
+                <span class="logo-tect">Microsoft</span>
+            </div>
+
+
+            <div class="company-logo">
+                <img src="https://raw.githubusercontent.com/loveBabbar/CodehelpYTWebDev/a2e9c3ba2f06448e44ba1ca41354c0a7a23ab91c/lecture33/images/linkedin.svg"
+                    class="google-logo">
+                <span class="logo-tect">Linkedin</span>
+            </div>
+
+
+            <div class="company-logo">
+                <img src="https://raw.githubusercontent.com/loveBabbar/CodehelpYTWebDev/a2e9c3ba2f06448e44ba1ca41354c0a7a23ab91c/lecture33/images/VectorEdu.svg"
+                    class="google-logo">
+                <span class="logo-tect">VectorEdu</span>
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+    <div class="feature-container">
+        <div class="feature-content">
+            <div class="main-info">
+                <h2 class="main-title">
+                    Our competitive advantage
+                </h2>
+                <p class="main-description">
+                    This is a section of some simple filler text, also known as placeholder text. It shares
+                    some characteristics of real written text but is random or otherwise generated.
+                </p>
+            </div>
+
+            <div class="feature-grid">
+                <!-- card 1 -->
+                <div class="feature-card">
+                    <div class="icon-container">
+                        <img class="feature-svg"
+                            src="https://raw.githubusercontent.com/loveBabbar/CodehelpYTWebDev/a2e9c3ba2f06448e44ba1ca41354c0a7a23ab91c/lecture33/images/PersonalizedLearn.svg" />
+                    </div>
+                    <div class="feature-info">
+                        <div class="feature-title">
+                            Personalized Learning
+                        </div>
+                        <div class="feature-description">
+                            Offer tailored learning experiences through AI and machine learning to cater to
+                            individual student needs.
+                        </div>
+                    </div>
+                </div>
+                <!-- card 2 -->
+                <div class="feature-card">
+                    <div class="icon-container">
+                        <img class="feature-svg"
+                            src="https://raw.githubusercontent.com/loveBabbar/CodehelpYTWebDev/a2e9c3ba2f06448e44ba1ca41354c0a7a23ab91c/lecture33/images/Affordability.svg" />
+                    </div>
+                    <div class="feature-info">
+                        <div class="feature-title">
+                            Affordability
+                        </div>
+                        <div class="feature-description">
+                            Provide high-quality education at an affordable price point, making it
+                            accessible to a broader audience.
+                        </div>
+                    </div>
+                </div>
+                <!-- card 3 -->
+                <div class="feature-card">
+                    <div class="icon-container">
+                        <img class="feature-svg"
+                            src="https://raw.githubusercontent.com/loveBabbar/CodehelpYTWebDev/a2e9c3ba2f06448e44ba1ca41354c0a7a23ab91c/lecture33/images/IndustryPatner.svg" />
+                    </div>
+                    <div class="feature-info">
+                        <div class="feature-title">
+                            Industry Partnerships
+                        </div>
+                        <div class="feature-description">
+                            Collaborate with well-known companies and institutions to offer accredited
+                            courses and certifications, adding credibility to your offerings.
+                        </div>
+                    </div>
+                </div>
+                <!-- card 4 -->
+                <div class="feature-card">
+                    <div class="icon-container">
+                        <img class="feature-svg"
+                            src="https://raw.githubusercontent.com/loveBabbar/CodehelpYTWebDev/a2e9c3ba2f06448e44ba1ca41354c0a7a23ab91c/lecture33/images/InnovativeTech.svg" />
+                    </div>
+                    <div class="feature-info">
+                        <div class="feature-title">
+                            Innovative Technology
+                        </div>
+                        <div class="feature-description">
+                            Utilize cutting-edge technology, such as augmented reality or virtual reality,
+                            to create immersive learning experiences.
+                        </div>
+                    </div>
+                </div>
+                <!-- card 5 -->
+                <div class="feature-card">
+                    <div class="icon-container">
+                        <img class="feature-svg"
+                            src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA4L2pvYjk2MS0wMDQ2LXAucG5n.png" />
+                    </div>
+                    <div class="feature-info">
+                        <div class="feature-title">
+                            Responsive Support
+                        </div>
+                        <div class="feature-description">
+                            Provide exceptional customer support and assistance to students and educators.
+                        </div>
+                    </div>
+                </div>
+                <!-- card 6 -->
+                <div class="feature-card">
+                    <div class="icon-container">
+                        <img class="feature-svg"
+                            src="https://raw.githubusercontent.com/loveBabbar/CodehelpYTWebDev/a2e9c3ba2f06448e44ba1ca41354c0a7a23ab91c/lecture33/images/Analytics.svg" />
+                    </div>
+                    <div class="feature-info">
+                        <div class="feature-title">
+                            Analytics and Insights
+                        </div>
+                        <div class="feature-description">
+                            Offer detailed progress tracking and analytics to help students and teachers
+                            monitor performance and make data-driven decisions.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="testimonial-container">
+        <div class="testimonial-content">
+
+            <h2 testimonial-title>
+                What Others Say About Us
+            </h2>
+
+            <div class="testimonial-grid">
+                <!-- card1 -->
+                <div class="testimonial-card">
+
+                    <div class="testimonial-avatar">
+                        <img
+                            src="https://github.com/loveBabbar/CodehelpYTWebDev/blob/main/lecture33/images/avatar1.png?raw=true" />
+
+                    </div>
+
+                    <div class="testimonial-text">
+                        “StudySync revolutionized my classroom! Engaging content and teacher resources make learning
+                        enjoyable. Highly recommended for educators.”
+                    </div>
+
+
+                    <div class="testimonial-info">
+                        <h3 class="testimonial-name">
+                            Sarah Johnson
+
+                        </h3>
+
+                        <p class="testimonial-desc">
+                            8th Grade English Teacher
+
+                        </p>
+
+                    </div>
+                </div>
+
+                <!-- card2 -->
+                <div class="testimonial-card">
+
+                    <div class="testimonial-avatar">
+                        <img
+                            src="https://github.com/loveBabbar/CodehelpYTWebDev/blob/main/lecture33/images/avatar2.png?raw=true" />
+
+                    </div>
+
+                    <div class="testimonial-text">
+                        “StudySync transformed our family's learning journey. Safe, interactive, and progress tracking
+                        features are invaluable for parents.”
+                    </div>
+
+
+                    <div class="testimonial-info">
+                        <h3 class="testimonial-name">
+                            Mark Davis
+
+                        </h3>
+
+                        <p class="testimonial-desc">
+                            Parent
+                        </p>
+
+                    </div>
+                </div>
+                <!-- card3 -->
+                <div class="testimonial-card">
+
+                    <div class="testimonial-avatar">
+                        <img
+                            src="https://github.com/loveBabbar/CodehelpYTWebDev/blob/main/lecture33/images/avatar3.png?raw=true" />
+
+                    </div>
+
+                    <div class="testimonial-text">
+                        “StudySync, a true game-changer! Flexible content, tailored assessments, and excellent support.
+                        Integral to our school district's success.”
+                    </div>
+
+
+                    <div class="testimonial-info">
+                        <h3 class="testimonial-name">
+                            Dr. James Carter
+                        </h3>
+
+                        <p class="testimonial-desc">
+                            school administrator </p>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="newsletter-container">
+        <div class="newsletter-content">
+            <!-- left part  -->
+            <div class="news-left">
+                <img src="https://github.com/loveBabbar/CodehelpYTWebDev/blob/main/lecture33/images/img.png?raw=true" loading="lazy" alt="news-img"/>
+            </div>
+            <!-- right part -->
+            <div class="news-right">
+
+                <div class="news-info">
+                    <h2 class="news-title">Get the latest updates</h2>
+                    
+                    <p class="news-desc">Sign up for our newsletter</p>
+                </div>
+
+                <form class="news-form">
+
+                    <input class="news-email" placeholder="Email" />
+                    <button class="news-send-button">
+                        Send
+                    </button>
+
+                </form>
+
+                <div class="privacy-policy">
+                    By signing up to our newsletter you agree to our
+                    <a class="news-link">
+                        Terms of Service
+                    </a>
+                    and
+                    <a class="news-link">
+                        Privacy policy
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-container">
+        <footer class="footer">
+
+            <div class="footer-top">
+
+                <div class="comp-logo">
+                    <a class="logo-link" href="#">
+                        <img class="logo-svg" src="https://raw.githubusercontent.com/loveBabbar/CodehelpYTWebDev/a2e9c3ba2f06448e44ba1ca41354c0a7a23ab91c/lecture33/images/StudySyn.svg"/>
+                        StudySync
+                    </a>
+                </div>
+                <p class="filler-text">Seamless Learning for Brighter Futures.</p>
+                <div class="social">
+                        <a class="social-link" href="#">
+                            <img src="https://raw.githubusercontent.com/loveBabbar/CodehelpYTWebDev/a2e9c3ba2f06448e44ba1ca41354c0a7a23ab91c/lecture33/images/instagram.svg" class="social-icon" />
+                        </a>
+                        <a class="social-link">
+                            <img src="https://raw.githubusercontent.com/loveBabbar/CodehelpYTWebDev/a2e9c3ba2f06448e44ba1ca41354c0a7a23ab91c/lecture33/images/linkedin.svg" class="social-icon" />
+                        </a>
+                        <a class="social-link">
+                            <img src="https://raw.githubusercontent.com/loveBabbar/CodehelpYTWebDev/a2e9c3ba2f06448e44ba1ca41354c0a7a23ab91c/lecture33/images/Microsoft.svg" class="social-icon" />
+                        </a>
+                        <a class="social-link">
+                            <img src="https://raw.githubusercontent.com/loveBabbar/CodehelpYTWebDev/a2e9c3ba2f06448e44ba1ca41354c0a7a23ab91c/lecture33/images/twitter.svg" class="social-icon" />
+                        </a>
+                </div>
+            </div>
+
+            <div class="footer-grid">
+                        <!-- column 1 -->
+                <div class="footer-grid-column">
+                            <div class="footer-grid-heading">
+                                Products
+                            </div>
+                            <ul class="footer-links-list">
+                                <li>
+                                    <a href="#overview" class="footer-link">Overview</a>
+                                </li>
+                                <li>
+                                    <a href="#overview" class="footer-link">Solutions</a>
+                                </li>
+                                <li>
+                                    <a href="#overview" class="footer-link">Pricing</a>
+                                </li>
+                                <li>
+                                    <a href="#overview" class="footer-link">Customers</a>
+                                </li>
+                            </ul>
+                </div>
+                        <!-- column 2 -->
+                <div class="footer-grid-column">
+                            <div class="footer-grid-heading">
+                                Company
+                            </div>
+                            <ul class="footer-links-list">
+                                <li>
+                                    <a href="#overview" class="footer-link">About</a>
+                                </li>
+                                <li>
+                                    <a href="#overview" class="footer-link">Investor Relations</a>
+                                </li>
+                                <li>
+                                    <a href="#overview" class="footer-link">Jobs</a>
+                                </li>
+                                <li>
+                                    <a href="#overview" class="footer-link">Press</a>
+                                </li>
+                                <li>
+                                    <a href="#overview" class="footer-link">Blog</a>
+                                </li>
+                            </ul>
+                </div>
+                        <!-- column 3 -->
+                <div class="footer-grid-column">
+                            <div class="footer-grid-heading">
+                                Support
+                            </div>
+                            <ul class="footer-links-list">
+                                <li>
+                                    <a href="#overview" class="footer-link">Contact</a>
+                                </li>
+                                <li>
+                                    <a href="#overview" class="footer-link">Documentation</a>
+                                </li>
+                                <li>
+                                    <a href="#overview" class="footer-link">Chat</a>
+                                </li>
+                                <li>
+                                    <a href="#overview" class="footer-link">FAQ</a>
+                                </li>
+                            </ul>
+                </div>
+                        <!-- column 4 -->
+                <div class="footer-grid-column">
+                            <div class="footer-grid-heading">
+                                Legal
+                            </div>
+                            <ul class="footer-links-list">
+                                <li>
+                                    <a href="#overview" class="footer-link">Terms of Service</a>
+                                </li>
+                                <li>
+                                    <a href="#overview" class="footer-link">Privacy Policy</a>
+                                </li>
+                                <li>
+                                    <a href="#overview" class="footer-link">Cookie Settings</a>
+                                </li>
+                                
+                            </ul>
+                </div>
+            </div>
+        </footer>
+        <div class="footer-copyright">
+            © 2021 - Present StudySync. All rights reserved.
+        </div>
+    </div>
+</body>
+</html>
